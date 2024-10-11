@@ -225,7 +225,7 @@ The holder then signs this nonce, to produce a confirmation token:
 The example above is informative.
 The structure of a confirmation token is credential type specific.
 
-This process is repeated for each credential that contains a confirmation method, using the key or identifier the confirmation method specifies.
+This process is repeated for each credential that contains a confirmation method, using the key or identifier the confirmation method (cnf) specifies.
 Each confirmation token is then embedded in a Verifiable Presentation next to the credential that requires it.
 
 Finally the holder then signs the nonce and audience, as part of their production of the application/vp+jwt:
