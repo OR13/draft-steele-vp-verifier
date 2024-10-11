@@ -88,11 +88,11 @@ Although {{Secure-VC}} describes several different media types, and each media t
 
 The following media types MUST be supported as JWT Claim Sets in the request body of the presentation API:
 
-- application/vp+jwt
+- `application/vp+jwt`
 
 The following media types MUST be supported as Enveloped Credentials in presentation JWT Claim Set:
 
-- application/vc+jwt
+- `application/vc+jwt`
 
 The following JSON Web Signature algorithms MUST be supported:
 
@@ -120,9 +120,9 @@ The following text describes a simple flow that cannot support confirmation or m
 
 First the holder needs to gather all the verifiable credentials that need to be presented, and to construct a Verifiable Presentation that includes them.
 
-Note that each verifiable credential in application/vc+jwt format is encoded as a data URI as described in {{RFC2397}}.
+Note that each verifiable credential in `application/vc+jwt` format is encoded as a data URI as described in {{RFC2397}}.
 
-Next the holder signs the presentation to produce a JWT of content type application/vp+jwt.
+Next the holder signs the presentation to produce a JWT of content type `application/vp+jwt`.
 
 The following informative example displays a decoded verifiable presentation:
 
@@ -229,7 +229,7 @@ The structure of a confirmation token is credential type specific.
 This process is repeated for each credential that contains a confirmation method, using the key or identifier the confirmation method (cnf) specifies.
 Each confirmation token is then embedded in a Verifiable Presentation next to the credential that requires it.
 
-Finally the holder then signs the nonce and audience, as part of their production of the application/vp+jwt:
+Finally the holder then signs the nonce and audience, as part of their production of the `application/vp+jwt`:
 
 For example:
 
@@ -264,9 +264,9 @@ This structure allows verifiers who usually process confirmation tokens along wi
 
 In the case that additional status information needs to be presented by the holder to the verifier, such as a status list or status assertion, those credentials can be presented along with the other credentials embedded in the signed presentation.
 
-It is worth noting that some credential formats such as application/vc+sd-jwt or application/vc+cose can transport confirmation tokens alongside or inside the original credential.
+It is worth noting that some credential formats such as `application/vc+sd-jwt` or `application/vc+cose` can transport confirmation tokens alongside or inside the original credential.
 
-Future revisions to this document might describe how to submit verifiable presentations that rely on structured suffixes other than +jwt.
+Future revisions to this document might describe how to submit verifiable presentations that rely on structured suffixes other than `+jwt`.
 
 # Security Considerations
 
