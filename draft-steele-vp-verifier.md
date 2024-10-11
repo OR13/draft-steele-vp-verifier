@@ -69,7 +69,6 @@ Although this API describes HTTP resources which require authentication, a speci
 
 {::boilerplate bcp14-tagged}
 
-
 The terms issuer, subject and holder are defined in {{W3C-VC}}.
 
 The terms `iat`, `exp`, `iss`, `sub`, `aud`, are defined in {{RFC7519}}.
