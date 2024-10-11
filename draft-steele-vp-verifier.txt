@@ -113,7 +113,7 @@ Table of Contents
 
    The terms issuer, subject and holder are defined in [W3C-VC].
 
-   The terms iat, exp, iss, sub, aud, are defined in [RFC7519].
+   The terms iat, exp, aud, are defined in [RFC7519].
 
    The term nonce is defined in [RFC9449].
 
@@ -279,6 +279,7 @@ Table of Contents
    }.{
      "aud": "https://example.gov",
      "iat": 1701960444,
+     "exp": 1701960555,
      "nonce": "LarRGSbmUPYtRYO6BQ4yn8"
    }
 
@@ -289,8 +290,8 @@ Table of Contents
 
    This process is repeated for each credential that contains a
    confirmation method, using the key or identifier the confirmation
-   method specifies.  Each confirmation token is then embedded in a
-   Verifiable Presentation next to the credential that requires it.
+   method (cnf) specifies.  Each confirmation token is then embedded in
+   a Verifiable Presentation next to the credential that requires it.
 
    Finally the holder then signs the nonce and audience, as part of
    their production of the application/vp+jwt:
