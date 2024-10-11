@@ -71,7 +71,7 @@ Although this API describes HTTP resources which require authentication, a speci
 
 The terms issuer, subject and holder are defined in {{W3C-VC}}.
 
-The terms `iat`, `exp`, `iss`, `sub`, `aud`, are defined in {{RFC7519}}.
+The terms `iat`, `exp`, `aud`, are defined in {{RFC7519}}.
 
 The term `nonce` is defined in {{RFC9449}}.
 
@@ -217,6 +217,7 @@ The holder then signs this nonce, to produce a confirmation token:
 }.{
   "aud": "https://example.gov",
   "iat": 1701960444,
+  "exp": 1701960555,
   "nonce": "LarRGSbmUPYtRYO6BQ4yn8"
 }
 ~~~
